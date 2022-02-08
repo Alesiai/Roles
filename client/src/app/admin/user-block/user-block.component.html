@@ -1,0 +1,14 @@
+<div class="row">
+    <table class="table">
+        <tr>
+            <th style="width: 30%;">Username</th>
+            <th style="width: 40%;">Count of orders</th>
+            <th style="width: 30%;">Blocked</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td>{{user.userName}}</td>
+            <td>{{user.orderCount}}</td>
+            <td><button (click)="blockedUser(user)" class="btn btn-info m-1">{{user.isBlocked}}</button></td>
+        </tr>
+    </table>
+</div>

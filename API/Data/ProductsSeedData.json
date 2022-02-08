@@ -1,0 +1,32 @@
+[
+    {
+        "Id": 1,
+        "Name": "Product 1",
+        "Cost": 1
+    },
+    {
+        "Id": 2,
+        "Name": "Product 2",
+        "Cost": 2
+    },
+    {
+        "Id": 3,
+        "Name": "Product 3",
+        "Cost": 3
+    },
+    {
+        "Id": 4,
+        "Name": "Product 4",
+        "Cost": 4
+    },
+    {
+        "Id": 5,
+        "Name": "Product 5",
+        "Cost": 5
+    },
+    {   
+        "Id": 6,
+        "Name": "Product 6",
+        "Cost": 6
+    }
+]

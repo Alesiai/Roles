@@ -1,0 +1,17 @@
+.product-card{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    border: 2px solid rgb(180, 180, 180); 
+    padding: 5px; 
+    border-radius: 5px;
+}
+
+.orders-count{
+    border: 2px solid rgb(180, 180, 180);
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+

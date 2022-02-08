@@ -1,0 +1,17 @@
+[
+    {
+        "UserName": "superUser",
+        "OrderCount": 5,
+        "IsBlocked": false
+    },
+    {
+        "UserName": "blockedUser",
+        "OrderCount": 0,
+        "IsBlocked": false
+    },
+    {
+        "UserName": "ususalUser",
+        "OrderCount": 0,
+        "IsBlocked": false
+    }
+]
