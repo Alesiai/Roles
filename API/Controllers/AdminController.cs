@@ -34,6 +34,13 @@ namespace API.Controllers
             return Ok(users);
         }
 
+        [HttpGet("users-with-roles/{username}")]
+        public async Task<ActionResult> GetUserWithRole(string username)
+        {
+            var user = await _userManager.FindByNameAsync(username);
+            return Ok(user);
+        }
+
         [HttpPost("edit-roles/{username}")]
         public async Task<ActionResult> EditRoles(string username, [FromQuery] string roles)
         {

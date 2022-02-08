@@ -8,7 +8,7 @@
         <tr *ngFor="let user of users">
             <td>{{user.userName}}</td>
             <td>{{user.orderCount}}</td>
-            <td><button (click)="blockedUser(user)" class="btn btn-info m-1">{{user.isBlocked}}</button></td>
+            <button (click)="blockedUser(user)" class="btn btn-info m-1">{{user.isBlocked}}</button>
         </tr>
     </table>
 </div>

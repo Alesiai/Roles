@@ -26,8 +26,10 @@ export class AccountService {
           if(user.isBlocked){
             this.logout();
           }
+          else{
           this.toastr.info('Your status is: ' + user.roles[user.roles.length-1]); 
           this.toastr.success('Welcome, ' + user.username);
+        }
         }
       })
     )
