@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import { of } from 'rxjs';
 import { Product } from '../_models/product';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  baseUrl = 'https://localhost:5001/api/';
+  baseUrl = environment.apiUrl;
   products: Product[] = [];
   
 

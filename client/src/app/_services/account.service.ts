@@ -5,12 +5,13 @@ import { User } from '../_models/user';
 import { ReplaySubject, of } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 import { RolesModalComponent } from '../modals/roles-modal/roles-modal.component';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
-  baseUrl = 'https://localhost:5001/api/';
+  baseUrl =environment.apiUrl;
   private currentUserSource = new ReplaySubject<User>(1);
   currentUser$ = this.currentUserSource.asObservable();
   users: User[] = [];
