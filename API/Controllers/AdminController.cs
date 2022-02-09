@@ -16,7 +16,7 @@ namespace API.Controllers
             _userManager = userManager;
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, SuperAdmin")]
         [HttpGet("users-with-roles")]
         public async Task<ActionResult> GetUsersWithRoles()
         {
@@ -36,7 +36,7 @@ namespace API.Controllers
         }
 
         
-        [Authorize]
+        [Authorize(Roles = "Admin, SuperAdmin")]
         [HttpGet("users-with-roles/{username}")]
         public async Task<ActionResult> GetUserWithRole(string username)
         {
@@ -45,7 +45,7 @@ namespace API.Controllers
         }
         
         
-        [Authorize]
+         [Authorize(Roles = "Admin, SuperAdmin")]
         [HttpPost("edit-roles/{username}")]
         public async Task<ActionResult> EditRoles(string username, [FromQuery] string roles)
         {
