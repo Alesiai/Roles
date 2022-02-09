@@ -7,6 +7,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
@@ -22,7 +23,9 @@ namespace API.Controllers
             _userManager = userManager;
             
         }
-
+        
+        
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
@@ -31,12 +34,14 @@ namespace API.Controllers
             return Ok(users);
         }
 
+
         [HttpGet("{username}")]
         public async Task<ActionResult<AppUser>> GetUser(string username)
         {
             return await _userRepository.GetUserByUsernameAsync(username);
         }
-
+        
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult> UpdateUser(UserDto userUpdateDto)
         {

@@ -44,8 +44,7 @@ export class PayModalComponent implements OnInit {
     }
 
     this.accountService.updateUser(this.user).subscribe();
-    
-    console.log(this.user);
+
     this.bsModalRef.hide();
 
     this.router.navigateByUrl('home', { skipLocationChange: true }).then(() => {
