@@ -22,6 +22,8 @@ import { RolesModalComponent } from './modals/roles-modal/roles-modal.component'
 import { UserBlockComponent } from './admin/user-block/user-block.component';
 import { PayModalComponent } from './modals/pay-modal/pay-modal.component';
 import { ThanksComponent } from './thanks/thanks.component';
+import { JwtInterceptor } from './_interceptors/jwt.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +51,8 @@ import { ThanksComponent } from './thanks/thanks.component';
     SharedModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
   ],
   bootstrap: [AppComponent]
 })
